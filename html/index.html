@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360商城</title>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="../js/getJsonLength.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/js.cookie.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/other.css">
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/move.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!--学习计算机编程技术一定要严谨认真，
+    容不得半点马虎，学习最重要是把基础打牢，
+    囫囵吞枣、不求甚解会给工作和学习带来很多隐患，效率上必须打折扣。写下来以自勉！
+    问问题之前 自己先多想多试几下-->
+</head>
+
+
+<body>
+<div class="index-header"></div>
+<!--header start-->
+<!--header over-->
+
+<!--轮播图 面包屑 start-->
+<div class="mod-index">
+    <!--轮播图 start-->
+    <div class="banner" id="banner">
+        <!--slide box-->
+        <div class="slideBox" id="slideBox">
+            <a style="background:url(http://p3.qhimg.com/dr/_448_/t01da9fc0523fe975ce.jpg) no-repeat 50% 50%;" href="javascript:;" > </a>
+            <a style="background:url(http://p7.qhimg.com/dr/0_448_/t0127d172036134b859.webp) no-repeat 50% 50%;" href="javascript:;" > </a>
+            <a style="background:url(http://p5.qhimg.com/dr/0_448_/t015b12e1563481e9c6.webp) no-repeat 50% 50%;" href="javascript:;" > </a>
+            <a style="background:url(http://p4.qhimg.com/dr/0_448_/t019309d1b3b73b67d8.webp) no-repeat 50% 50%;" href="javascript:;" > </a>
+            <a style="background:url(http://p4.qhimg.com/dr/0_448_/t018955153e4de04ae0.webp) no-repeat 50% 50%;" href="javascript:;" > </a>
+            <a style="background:url(http://p6.qhimg.com/dr/0_448_/t016f5e73ea287dd0dc.webp) no-repeat 50% 50%;" href="javascript:;" > </a>
+        </div>
+        <!--左右按钮-->
+        <a href="javascript:;" class="slide-prev" id="slide-prev" style="display: inline;"></a>
+        <a href="javascript:;" class="slide-next" id="slide-next" style="display: inline;"></a>
+        <!--slide point-->
+        <div class="slide-point" id="slide-point">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <!--轮播图 over-->
+    <!--面包屑 start-->
+    <div class="crumbs">
+        <ul>
+            <li class="m1">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" >
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" >
+                            <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" >
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="#">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m2">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://mall.360.com/search/?q=%E9%A3%9E%E6%AF%9B%E8%85%BF" target="_blank">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="#">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m3">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m4">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m5">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m6">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m7">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="m8">
+                <a>
+                    手机及配件
+                </a>
+                <div class="hide">
+                    <div class="hide1">
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+                                <a href="javascript:;">360手机f4全网通</a>
+                                <a href="javascript:;">360手机f4标准版</a>
+
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="javascript:;">360手机</a>
+                                <i></i>
+                            </dt>
+                            <dd>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4全网通</a>
+                                <a style="color:#ee4a25" href="javascript:;">360手机N4</a>
+                                <a href="javascript:;">360手机f4高配版</a>
+
+                                <a href="javascript:;">360手机奇酷青春版</a>
+                                <a href="javascript:;">360手机N4S全网通版</a>
+                            </dd>
+                        </dl>
+                        <div class="brand-logo">
+                            <ul>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" target="_blank">
+                                        <img src="http://p6.qhimg.com/dr/131_47_/t01472f6eafd1490585.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##">
+                                        <img src="http://p9.qhimg.com/dr/131_47_/t01b1d0baefefa19df4.webp" style="display: block;">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="##" >
+                                        <img src="http://p4.qhimg.com/dr/131_47_/t018d0d21b6947038f9.webp" style="display: block;">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hide2">
+                        <a href="##">
+                            <img src="http://p1.qhimg.com/dr/240_400_/t0163cc76a4ce8232c0.webp" style="display: inline;">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+
+            $(".hide").parent("li").hover(
+                function(){
+                    $(this).find(".hide").show();
+            },
+                function(){
+                    $(this).find(".hide").hide();
+            })
+        })
+
+    </script>
+    <!--面包屑 over-->
+</div>
+<script>
+$(function(){
+    var oBtnL = document.getElementById('slide-prev');
+    var oBtnR = document.getElementById('slide-next');
+    var small_lis = document.getElementById('slide-point').children;
+    //console.log(small_lis);
+    var big_lis =  document.getElementById('slideBox').children;
+    var ZIndex = 1;
+    var now = 0;//设置一个变量保存当前点击页面
+    //从小处着手 遍历xiao
+    for (var i = 0;i < small_lis.length; i++) {
+        //遍历的时候 设置一个变量 记录当前点击的页面
+        small_lis[i].index = i;
+        small_lis[i].onclick = function () {
+            if (now != this.index) {
+                now = this.index;
+                //对小图datu进行处理
+                change();
+            }
+        }
+    }
+    //点击左右按钮
+    oBtnR.onclick = function () {
+        if (now == small_lis.length - 1) {
+            now = 0;
+        } else {
+            now++;
+        }
+        change();
+    }
+    oBtnL.onclick = function () {
+        if (now == 0) {
+            now = small_lis.length - 1;
+        } else {
+            now--;
+        }
+        change();
+    }
+    function change() {
+        //对小图进行处理
+        for(var i = 0 ; i < small_lis.length ; i++) {
+            small_lis[i].className = '';
+        }
+       small_lis[now].className = 'active';
+
+        //再对大图进行操作
+        big_lis[now].style.zIndex = ++ZIndex;
+        big_lis[now].style.opacity = 0;
+        move(big_lis[now], 'opacity', 100);
+    }
+    var timer = null;
+    clearInterval(timer);
+    timer = setInterval(oBtnR.onclick, 2800);
+
+    document.getElementById('banner').onmouseover = function(){
+        clearInterval(timer)
+    }
+    document.getElementById('banner').onmouseout = function(){
+        timer=setInterval(oBtnR.onclick, 2800);
+    }
+})
+</script>
+<!--轮播图 面包屑 over-->
+
+<!--p0 start-->
+<div class="p0" id="p0">
+<ul class="p0-container" id="p0-container">
+    <!--pinjie-->
+</ul>
+</div>
+<script>
+    $(function(){
+        var ajax=InitAjax();
+        DoAjaxGet(ajax,'../data/p0.json', load);
+        function load(res) {
+            var e = eval(res);
+            //console.log(e);
+            var html = '';
+            for (var i = 0; i < e.length;i ++) {
+                html += '<li><a href="goodsList.html" target="_blank"><img src=" '+e[i].url+' " alt=""></a></li> ';
+            }
+            //console.log(html);
+            document.getElementById('p0-container').innerHTML=html;
+        }
+    })
+</script>
+<!--p0 over-->
+<!-- start-->
+<div class="p" id="p1">
+    <div class="part-container"><span class="vline"></span><span class="vicon"></span><span class="part-title">热门活动</span><span class="vicon"></span><span class="vline"></span></div>
+    <ul class="part-container">
+        <li class="ac0">
+            <a href="goodsList.html" target="_blank">
+                <img class="js-lazyload" src="http://p0.qhimg.com/t01d88077637eda76a6.webp" style="display: block;"> </a>
+        </li>
+        <li class="ac1">
+            <a href="goodsList.html" target="_blank">
+                <img class="js-lazyload" src="http://p7.qhimg.com/t01947a86212f590787.webp" style="display: block;">
+            </a>
+        </li>
+        <li class="ac2"> <a href="goodsList.html" target="_blank">
+            <img class="js-lazyload" src="http://p6.qhimg.com/t010b3cc10bfa7fe857.webp" style="display: block;"> </a>
+        </li>
+        <li class="ac3">
+            <a href="goodsList.html" target="_blank">
+                <img class="js-lazyload"  src="http://p2.qhimg.com/t01cb41a2560b49b444.webp" style="display: block;">
+            </a>
+        </li>
+        <li class="ac4">
+            <a href="goodsList.html" target="_blank">
+                <img class="js-lazyload" src="http://p2.qhimg.com/t018163b3e0b784e3ae.webp" style="display: block;">
+            </a>
+        </li>
+        <li class="ac5"> <a href="goodsList.html" target="_blank" >
+            <img class="js-lazyload" src="http://p8.qhimg.com/t018b7fa3f0f7af05d9.webp" style="display: block;">
+        </a>
+        </li>
+    </ul>
+</div>
+<!-- over-->
+
+<!-- start-->
+<div class="p" id="p2"></div>
+<script>
+    $("#p2").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p3"></div>
+<script>
+    $("#p3").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p4"></div>
+<script>
+    $("#p4").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p5"></div>
+<script>
+    $("#p5").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p6"></div>
+<script>
+    $("#p6").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p7"></div>
+<script>
+    $("#p7").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p8"></div>
+<script>
+    $("#p8").load('../html/index-p.html');
+</script>
+<!-- over-->
+
+<!-- start-->
+<div class="p" id="p9"></div>
+<script>
+    $("#p9").load('../html/index-p.html');
+</script>
+<!-- over-->
+<!-- start-->
+<div class="p" id="p10"></div>
+<script>
+    $("#p10").load('../html/index-p.html');
+</script>
+<!-- over-->
+
+<!-- start-->
+<div class="p" id="p11" >
+    <!---->
+    <div class="part-container"> <span class="part-title">新品速递</span></div>
+    <!---->
+    <div class="part-container">
+        <ul class="p11-list" id="p11-list">
+
+        </ul>
+    </div>
+    <div class="nomore" >没有更多了</div>
+</div>
+<!-- over-->
+<!--elevator start-->
+<div class="elevator" id="elevator">
+    <ul>
+        <li style="background-position-y: 0px;">
+            <a href="javascript:;">
+                1F
+                <br>
+                活动
+            </a>
+        </li>
+        <li style="background-position-y: -39px;"><a href="javascript:;">2F<br>手机</a></li>
+        <li style="background-position-y: -117px;"><a href="javascript:;">3F<br>穿戴</a></li>
+        <li style="background-position-y: -78px;"><a href="javascript:;">4F<br>家具</a></li>
+        <li style="background-position-y: -156px;"><a href="javascript:;">5F<br>车品</a></li>
+        <li style="background-position-y: -195px;"><a href="javascript:;">6F<br>影音</a></li>
+        <li style="background-position-y: -234px;"><a href="javascript:;">7F<br>电脑</a></li>
+        <li style="background-position-y: -312px;"><a href="javascript:;">8F<br>无人机</a></li>
+        <li style="background-position-y: -237px;"><a href="javascript:;">9F<br>母婴</a></li>
+        <li style="background-position-y: -351px;"><a href="javascript:;">10F<br>试用</a></li>
+        <li style="background-position-y: -390px;"><a href="javascript:;">11F<br>新品</a></li>
+    </ul>
+</div>
+<script>
+    $(function(){
+        var isClick = false ;
+        $(".elevator ul li").click(function(){
+            isClick = true ;
+            //左侧active状态改变
+            $(this).find("a").addClass("on").parent().siblings().find("a").removeClass("on") ;
+            //右侧楼梯滑动到对应的层
+            var _top = $(".p").eq($(this).index()).offset().top ;/**/
+            $("html , body").stop().animate({scrollTop: _top} , 500 , function(){
+                isClick = false ;
+            }) ;
+        }) ;
+
+
+        var _scrollTop = $(window).scrollTop() ;
+        if(_scrollTop>460){
+            $('#elevator').show();
+            } else {
+            $('#elevator').hide();
+        }
+        //window scroll shijian
+        $(window).scroll(function() {
+            if (!isClick) {
+                var _scrollTop = $(this).scrollTop();
+                if (_scrollTop > 460) {
+                    $('#elevator').show();
+
+                    $(".p").each(function () {
+                        if (_scrollTop >= ( $(this).offset().top - $(this).outerHeight() / 2 )) {
+                            //console.log($(this).outerHeight() + ":" + $(this).offset().top+ ":" + $(document).scrollTop());
+                            $("#elevator ul li").eq($(this).index('.p')).find("a").addClass("on").parent().siblings().find("a").removeClass("on");
+                        }
+                    })
+                } else {
+                    $('#elevator').hide();
+                }
+            }
+        })
+    })
+</script>
+<!--elevator over-->
+
+
+<!--footer start-->
+<div class="index-footer"></div>
+<!--footer over-->
+
+<script>
+    var url = "http://10.11.71.160:8888/pj/data/kuayu.php?jsoncallback=call";
+    var s = document.createElement('script');
+    s.src = url;
+    document.getElementsByTagName('head')[0].appendChild(s);
+   /* if(window.localStorage){
+        alert('This browser supports localStorage');
+    }else{
+        alert('This browser does NOT support localStorage');
+    }*/
+</script>
+
+</body>
+</html>

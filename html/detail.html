@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+<!--
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>&lt;!&ndash;&ndash;&gt;
+-->
+
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script src="../js/getJsonLength.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/basefd.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <script src="../js/jquery.fly.min.js"></script>
+
+    <script src="../js/move.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/lodash.core.min.js"></script>
+    <script src="../js/js.cookie.js"></script>
+<!--
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+-->
+    <script type="text/javascript" src="../js/fdj/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="../js/fdj/base.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="detail-header"></div>
+
+
+<div class="prodIntro" >
+
+    <div class="right-extra" style=" float: left; padding: 100px;">
+        <!--产品参数开始-->
+        <div>
+            <!--shangmiandedatupian-->
+            <div id="preview" class="spec-preview">
+					<span class="jqzoom">
+						<img jqimg="../images/b1.jpg" src="../images/s1.jpg" />
+					</span>
+            </div>
+            <!--缩图开始-->
+            <div class="spec-scroll">
+                <a class="prev">&lt;</a>
+                <a class="next">&gt;</a>
+                <div class="items">
+                    <ul>
+                        <li><img alt="佳能" bimg="../images/b1.jpg" src="../images/s1.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b2.jpg" src="../images/s2.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b3.jpg" src="../images/s3.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b1.jpg" src="../images/s1.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b3.jpg" src="../images/s3.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b1.jpg" src="../images/s1.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b2.jpg" src="../images/s2.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b1.jpg" src="../images/s1.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b2.jpg" src="../images/s2.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b2.jpg" src="../images/s2.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b1.jpg" src="../images/s1.jpg" onmousemove="preview(this);"></li>
+                        <li><img alt="佳能" bimg="../images/b2.jpg" src="../images/s2.jpg" onmousemove="preview(this);"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--缩图结束-->
+        </div>
+    </div>
+
+    <div class=" sInfo" >
+        <a name="sInfo"></a>
+        <div class="tr nobdr">
+            <strong id="detail-name">Ticwatch 2 智能手表经典版（银色精钢表头配 珠光粉尖尾真皮表带）</strong>
+            <p class="slogan" >语音触摸ticwear系统 蓝牙3G电话手表  防水 GPS定位 记步 测心率</p>
+        </div>
+        <div class="tr nobdr tr1" style="margin-top:10px">
+            <div class="txt">
+                <strong class="nowprice" id="detail-price">
+                <em>￥</em> 1299.00
+                </strong>
+            </div>
+            <div class="gift" style="display:none" >
+                <i class="gift-label">赠品</i>
+            </div>
+            <div class="txt">
+                <span>分类</span>
+                <ul class="glist" id="glist">
+                    <li>
+                        <a href="javascript:;" title="悦动版黑色">悦动版黑色</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="悦动版白色">悦动版白色</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="经典版3G黑皮带">经典版3G黑皮带</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="经典版3G棕皮带">经典版3G棕皮带</a>
+                    </li>
+                    <li class="cur">
+                        <a href="javascript:;" title="经典版3G粉皮带">经典版3G粉皮带</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="经典版3G钢表带">经典版3G钢表带</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="经典版3G蓝宝石屏幕">经典版3G蓝宝石</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" title="经典版3G玫瑰金色蓝宝石屏幕">经典版3G玫瑰金</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="txt">
+                <span style="margin-top:6px">数量</span>
+                <div class="gcIpt">
+                    <a href="javascript:void(0);" class="decrement disabled" id="detail-dec">-</a>
+                    <input type="text" id="detail-num" class="goodsCount" value="1" >
+                    <a href="javascript:void(0);" class="increment" id="detail-add" data-num="1">+</a>
+                </div>
+            </div>
+            <p class="cl mianze">
+            </p>
+        </div>
+        <div class="tr nobdr btns">
+            <a href="javascript:void(0);" class="gInfoBtn gInfoBtn-addcart" id="detail-cart" >
+                <span class="gInfoBtn-icon gInfoBtn-icon-cart"></span>加入购物车</a>
+            <a href="javascript:void(0);" class="favorite nofav" id="detail-love" >
+                <span class="gInfoBtn-icon gInfoBtn-icon-heart" id="detail-love-icon"></span>喜欢</a>
+            <div style="clear:both"></div>
+        </div>
+        <div class="tr nobdr">
+            <div class="txt">
+                <span>保障</span>
+                <ul class="guarantee">
+                    <li class="shop_info"><i></i>360商城发货&amp;售后  </li>
+                    <li class="postage_free"><i></i>满99元包邮  </li>
+                    <li class="sales_return"><i></i>7天无理由退货  </li>
+                    <li class="sales_replace"><i></i>15天免费换货          </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!---->
+<div class="detail-footer"></div>
+<script>
+    var cartName =  getCookie("loginedUser");
+    if(cartName  == "") {//
+        cartName = 'admin';
+    }
+    //console.log(cartName);
+    //取到 cookie data
+    var detail = $.cookie('mydetail') ? JSON.parse($.cookie('mydetail')) : {};
+    var goods = $.cookie('mycart'+cartName) ? JSON.parse($.cookie("mycart"+cartName)) : {};
+    console.log(goods)
+    //console.log($.cookie('mycart'+cartName))
+   // console.log(JSON.parse($.cookie("mycart"+cartName)))
+    if(detail.id){//做下判断 刚进入页面shi
+        if(goods[detail.id]) {//购物车里有这个数据
+            // shiyong data
+            $('#detail-price').html('<em>￥</em>'+ goods[detail.id].price);
+            $('#detail-name').html(goods[detail.id].name);
+            $('#detail-num').val(goods[detail.id].num);
+            //$('.items > ul > li img').attr({ src: "goods[detail.id].pic", alt: "Test Image" });
+
+        } else {//购物车里面没有这个id数据的时候 从detail cookie中屈指
+            $('#detail-price').html('<em>￥</em>'+ detail.price);
+            $('#detail-name').html(detail.name);
+            $('#detail-num').val(detail.num);
+            //$('.items > ul > li img').attr({ src: "detail.pic", alt: "Test Image" });
+        }
+    }
+    /*进入页面后 各种点击事件*/
+    //加减点击
+    $('#detail-add').click(function(){
+        var n=$(this).prev().val();
+        var nu=parseInt(n)+1;
+        if(nu > 20){
+            tip()
+            nu=20;
+            $(this).prev().val(nu);
+            return;
+        }
+        $(this).prev().val(nu);
+    })
+
+      $('#detail-dec').click(function(){
+          var n=$(this).next().val();
+          var nu=parseInt(n)-1;
+          if(nu==0){tip(); return;}
+          if(nu > 20){
+              tip();
+              nu =20;
+          }
+          $(this).next().val(nu);
+      })
+
+    /*直接设置input 值*/
+    //
+    $('.goodsCount').live("keyup", function(){
+        this.value=this.value.replace(/[^0-9-]+/, '');
+    })
+    //
+    $('.goodsCount').live("blur", function(){
+        var n=$(this).val();
+        if(n < 1){
+            tip()
+            n=1;
+            $(this).val(n);
+            return;
+        } else if(n > 20){
+            tip()
+            n=20;
+            $(this).val(n);
+            return;
+        } else {
+            //set value
+            $(this).val(n);
+            return;
+        }
+    })
+
+
+    /*click love*/
+    var isCarted = false;
+
+    $('#detail-cart').click(function(){
+        if(!isCarted){
+            //change style
+            $("#detail-cart").css("backgroundColor","#ADADAD");
+            //fly cart
+            var addcar = $(this);
+            if (detail.id) {
+                var imgUrl = detail.pic?detail.pic:goods[detail.id].pic;
+                var flyer = $('<img class="u-flyer" src="' + imgUrl + '">');
+                flyer.fly({
+                    start: {
+                        left: event.clientX ,
+                        top: event.clientY - 100
+                    },
+                    end: {
+                        left: 1390 + 10,
+                        top: 126 + 10,
+                        width: 0,
+                        height: 0
+                    }/*,
+                     onEnd: function () {
+                     $("#detail-cart").css("color","#CC0000");
+                     //addcar.css("cursor","default").removeClass('orange').unbind('click');
+                     //this.destory();
+                     //return;
+                     }*/
+                })
+                // console.log(event.pageX +":"+event.pageY)
+            }
+
+            //存 cookie
+            if (detail.id){
+                if(goods[detail.id]){//如果是从carts cookie取数据
+                    goods[detail.id].num = $(this).parent().parent('.sInfo').find("#detail-num").val();
+                    //存进mycarts
+                    $.cookie("mycart"+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+                } else {//写json 存进cookie
+                    goods[detail.id] = {
+                        "name": detail.name,
+                        "price": detail.price,
+                        "num": $(this).parent().parent('.sInfo').find("#detail-num").val(),
+                        "id":detail.id,
+                        "pic": detail.pic,
+                        "usn":detail.usn
+                    }
+                    //存进mycarts cookie
+                    $.cookie("mycart"+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+                }
+            }
+            isCarted = true;
+        } else {
+          return;
+        }
+    })
+
+    /*click love*/
+    var isLoved = false;
+    $('#detail-love').click(function(){
+        if(!isLoved ){
+            $('#detail-love-icon').css("background-position-y","-40px");
+            isLoved = true;
+        } else {
+            $('#detail-love-icon').css("background-position-y","-20px");
+            isLoved = false;
+        }
+    })
+    /*
+    选择其他款式
+    * */
+    $(".glist li").click(function(){
+        //active状态改变
+        $(this).addClass("cur").siblings().removeClass("cur") ;
+    })
+</script>
+
+</body>
+</html>

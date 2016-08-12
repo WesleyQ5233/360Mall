@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+<!--
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+-->
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/js.cookie.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/other.css">
+    <script src="../js/move.js"></script>
+    <script src="../js/main.js"></script>
+<!--
+    <script src="../js/lodash.core.min.js"></script>
+-->
+    <script src="../js/getJsonLength.js"></script>
+  <!--  <script src="https://cdn.jsdelivr.net/lodash/4.14.0/lodash.core.min.js"></script>-->
+</head>
+<body>
+<div class="cart-header"></div>
+<div class="gCart">
+    <div class="hd">
+        <h3>我的购物车</h3>
+    </div>
+    <div class="bd">
+        <div class="cartList">
+            <div class="hd">
+                <div class="col1">商品信息</div>
+                <div class="col2">单价</div>
+                <div class="col3">数量</div>
+                <div class="col4">小计</div> <div class="col5">操作</div>
+            </div>
+
+            <ul class="bd" id="buy-items">
+                <!--拼接 -->
+            </ul>
+            <div class="gAmount">
+                商品总计：
+                <span id="totalP"></span>
+                元
+            </div>
+            <div class="btn">
+                <input style="float: left;margin-left:2px;margin-right: 4px;margin-top: 4px;" type="checkbox" class="check checks"><label class="quanxuan" style="float: left;">全选</label>
+                <a href="/" class="b1" title="继续购物" data-monitor="shopcart_continueshop_click">继续购物</a>
+                <a href="javascript:void(0);" class="b2" title="去结算" >去结算</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cart-footer"></div>
+
+</body>
+<script>
+    var cartName =  getCookie("loginedUser");
+    if(cartName  == "") {//
+        cartName = 'admin';
+    }
+    console.log(cartName);
+
+    //var goodsUsn = $('#login-usn').html();
+    var goods = $.cookie('mycart'+cartName) ? JSON.parse($.cookie('mycart'+cartName)) : {};
+    //yong data
+    var html = '';
+    //var totalP = 0.00;
+    for(var goodsId in goods){
+        html += '<li class="wrap_row" id="'+goods[goodsId].id+'"><input style="float: left;margin-top: 34px;margin-left: 1px;margin-right: 2px;" type="checkbox" class="check"><div class="row" > <div class="r1"><img class="item-img" src="'+goods[goodsId].pic+'"> ';
+        html += '<a class="item-namexx" href="detail.html" target="_blank">  '
+        html += goods[goodsId].name;
+        html += '</a> </div><div class="r2"><span class="danjian" style="margin-left: -30px;">'
+        html += goods[goodsId].price;
+        html += '</span></div><div class="r3"><div class="gcIpt"><a href="javascript:;" class="decrement" id="decrement"></a> ';
+        html += '<input id="goodsCount" type="text" class="goodsCount" value=" '+goods[goodsId].num+' " /><a href="javascript:;" class="increment" id="increment"></a></div>  ';
+        html += '<div class="errTip">已达到最大购买数量</div></div><div class="r4"><span class="xiaoji"> ';
+        html += parseFloat(goods[goodsId].price) * parseFloat(goods[goodsId].num);
+        html += '</span>元</div><div class="r5"><a href="javascript:;" class="delOrder">删除</a></div></div></li>'
+        //totalP += parseFloat(goods[i].price) * parseFloat(goods[goodsId].num);
+    }
+    //进入页面时 加载
+    $('#buy-items').html(html);
+    //$('#totalP').text(totalP.toFixed(2));
+    getMoney()
+    /*
+    * 该页面的一系列点击 事件
+    * */
+    /*点击结算时判断下是否登录*/
+    $('.btn .b2').click(function(){
+
+        if(getJsonLength(goodsId, goods) == 0){//自己封装的方法 求json长度；
+            tip("购物车不能为空")
+            //alert('购物车不能为空')
+        } else {
+            var loginedUser = getCookie("loginedUser");
+            // 如果存在，则说明有用户已登录成功，界面显示欢迎，同时将请登录字样去除
+            if(loginedUser == ""){
+                tip('请先登录')
+                //alert('请先登录')
+            }else {
+                location.href = "pay.html";
+            }
+        }
+    })
+
+//复选框全选
+    var check = $('.check');
+    var checks = $('.checks');
+    $(check).each(function(){
+        $(this).click(function(){
+            if($(this).hasClass('checks')){
+                for(var i=0;i<check.length;i++){
+                    check[i].checked=this.checked;
+                }
+            }
+            if(!this.checked){
+                $(checks).attr('checked',false);
+            }
+            //总价计算
+           getMoney();
+        })
+    })
+
+    /*加减数量*///只能输入非零的正整数：“^+?[1-9][0-9]*$”
+    //jia
+    $('.increment').live("click", function(){
+        var n=$(this).prev().val();
+        var num=parseInt(n)+1;
+        if(num==0){
+            tip();
+            num = 1;
+            //return false;
+        }
+        if(num > 20){
+            tip();
+            num = 20;
+            $(this).prev().val(num);
+            //return false;
+        }
+        //set value
+        $(this).prev().val(num);
+
+        //小计
+        var perPrice =parseInt($(this).parent().parent('.r3').prev('').find('.danjian').text());
+        $(this).parent().parent('.r3').next().find('.xiaoji').text(num*perPrice);
+        //总计
+        getMoney();
+        //record id 存进cookie
+        var goodsId = $(this).parent().parent().parent().parent().attr('id');
+        //console.log(goodsId);
+        goods[goodsId].num = num;
+        $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+    })
+    //jian
+    $('.decrement').live("click", function(){
+        var n=$(this).next().val();
+        //console.log(n.isNaN)
+        var num=parseInt(n)-1;
+
+        if(num == 0){
+            tip();
+            num = 1;
+            //return;
+        }
+        if(num > 20){
+            tip();
+            num=20;
+            //return;
+        }
+        $(this).next().val(num);
+        //小计
+        var perPrice =parseInt($(this).parent().parent('.r3').prev('').find('.danjian').text());
+        $(this).parent().parent('.r3').next().find('.xiaoji').text(num*perPrice);
+        //总计
+        getMoney();
+
+        //record id 存进cookie
+        var goodsId = $(this).parent().parent().parent().parent().attr('id');
+        goods[goodsId].num = num;
+        $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+
+    })
+
+    /*点击删除*/
+    $('.delOrder').live("click", function(){
+        $(this).parent().parent().parent().remove();
+        var goodsId = $(this).parent().parent().parent().attr('id');
+       // console.log(goodsId)
+        goods[goodsId] = undefined;
+        $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+        //console.log(goods);
+
+        getMoney();
+    })
+
+    /*input keyup blur 直接设置input 值*/
+    $('#goodsCount').live("keyup", function(){
+       this.value=this.value.replace(/[^0-9-]+/, '');//只能输入数字
+    })
+    $('#goodsCount').live("blur", function(){
+        var n=$(this).val();
+        if(n < 1){
+            tip();
+            n=1;
+            $(this).val(n);
+            //小计
+            var perPrice =parseInt($(this).parent().parent('.r3').prev('').find('.danjian').text());
+            $(this).parent().parent('.r3').next().find('.xiaoji').text(n*perPrice);
+            //总计
+            getMoney();
+            //拿到id 存进cookie
+            var goodsId = $(this).parent().parent().parent().parent().attr('id');
+            goods[goodsId].num = n;
+            $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+            return;} else if(n > 20){
+            tip();
+            n=20;
+            $(this).val(n);
+            //小计
+            var perPrice =parseInt($(this).parent().parent('.r3').prev('').find('.danjian').text());
+            $(this).parent().parent('.r3').next().find('.xiaoji').text(n*perPrice);
+            //总计
+            getMoney();
+
+            //拿到id 存进cookie
+            var goodsId = $(this).parent().parent().parent().parent().attr('id');
+            goods[goodsId].num = n;
+            $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+           return;} else {
+            //set value
+            $(this).val(n);
+            //小计
+            var perPrice =parseInt($(this).parent().parent('.r3').prev('').find('.danjian').text());
+            $(this).parent().parent('.r3').next().find('.xiaoji').text(n*perPrice);
+            //总计
+            getMoney();
+
+            //拿到id 存进cookie
+            var goodsId = $(this).parent().parent().parent().parent().attr('id');
+            goods[goodsId].num = n;
+            $.cookie('mycart'+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+            return;
+        }
+    })
+
+    /*总计*/
+    function getMoney(){
+        var lis = $('.wrap_row');
+        var num = 0;
+        var price = 0;
+        var count = 0;//小计
+        for(var i= 0;i < lis.length; i++){
+            if(lis[i].getElementsByTagName('input')[0].checked){
+                price = parseFloat($(lis[i]).find('.danjian').text());
+                num =  parseFloat(lis[i].getElementsByTagName('input')[1].value);
+                count += price*num;
+            }
+        }
+        $('#totalP').text(count.toFixed(2));
+    }
+</script>
+</html>

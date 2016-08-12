@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+   <!-- <script src="../js/jquery-1.4.2.js"></script>-->
+    <script src="../js/jq-page.js"></script>
+
+    <script src="../js/getJsonLength.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/js.cookie.js"></script>
+    <script src="../js/lodash.core.min.js"></script>
+    <script src="../js/jquery.fly.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/other.css">
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/move.js"></script>
+    <script src="../js/main.js"></script>
+    <!--ip address-->
+   <!-- <script language="javascript" type="text/javascript" src="http://fw.qq.com/ipaddress">
+    </script>-->
+
+    <style>
+        *{ margin:0; padding:0; list-style:none;}
+        a{ text-decoration:none;}
+        a:hover{ text-decoration:none;}
+        .tcdPageCode{padding: 15px 20px;text-align: left;color: #ccc;     margin-top: 60px;  margin-bottom: 40px;  text-align: center;}
+        .tcdPageCode a{display: inline-block;color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+        .tcdPageCode a:hover{text-decoration: none;border: 1px solid #428bca;}
+        .tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+        .tcdPageCode span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}
+    </style>
+</head>
+<body>
+<div class="list-header"></div>
+<div class="product-list">
+    <div class="search-box">
+        <div class="search-nav">
+            <span class="default_path">
+                <a href="/" data-monitor="search_crumb_home">首页</a><i>&gt;</i><a href="/search" data-monitor="search_crumb_all">全部搜索结果</a></span> <div class="breadcrumbs_box"><span class="sw_box">
+            </span>
+            <span class="tag_box">
+            </span></div> <span class="qwords">全部</span></div>
+    </div>
+   <!-- <div class="filter-box" style="display: block;">
+        <div class="filter js-cates" data-monitor="search_fenlei_click">
+            <div class="hint">分类:</div>
+            <div class="option_box unspread">
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3464f28d01269cc42a2a" title="智能家居">智能家居</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=572b288c4ae38d3b230c7e0f" title="娱乐影音">娱乐影音</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3464f28d01269cc42a4d" title="智能穿戴">智能穿戴</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3465f28d01269cc42a5f" title="手机/配件">手机/配件</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=572b288c4ae38d3b230c7df8" title="母婴玩具">母婴玩具</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3464f28d01269cc42a42" title="电脑/游戏">电脑/游戏</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3465f28d01269cc42a66" title="智能车品">智能车品</a>
+
+                <a class="" href="/search/?sort=weight&amp;q=*&amp;cate=571e3465f28d01269cc42a6e" title="无人机/机器人">无人机/机器人</a>
+
+                <div class="find_more">
+                    <span class="spread_icon">
+                        <img class="up" src="http://p3.qhimg.com/t015f4bcc45a14cddc3.png">
+                        <img class="down" src="http://p3.qhimg.com/t01b76f029538d8f9df.png">
+                    </span>
+                    <span class="find_txt">查看更多</span>才
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="filter js-options clearfix" data-monitor="">
+            <div class="hint">品牌: </div>
+            <div class="option_box unspread">
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00044" title="360">360</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00015" title="JBL">JBL</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00099" title="宜客莱">宜客莱</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00091" title="大管家">大管家</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00161" title="纽曼">纽曼</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00162" title="罗技">罗技</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00327" title="面具熊">面具熊</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00197" title="黑爵">黑爵</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00346" title="贝瓦">贝瓦</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00184" title="阿思翠">阿思翠</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00167" title="苏泊尔">苏泊尔</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00062" title="乐心">乐心</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00095" title="奇酷">奇酷</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00191" title="飞利浦">飞利浦</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00330" title="硕美科">硕美科</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00366" title="MIFA">MIFA</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00096" title="奥睿科">奥睿科</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00234" title="beats">beats</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00269" title="小白熊">小白熊</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00387" title="伟易达">伟易达</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00046" title="DM">DM</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00074" title="刷刷手环">刷刷手环</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00185" title="雅马哈">雅马哈</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00040" title="iNSIST">iNSIST</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00300" title="索尼">索尼</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00302" title="倍轻松">倍轻松</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00386" title="贝芬乐">贝芬乐</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00134" title="暴风魔镜">暴风魔镜</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00139" title="樱桃">樱桃</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00217" title="炫佩">炫佩</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00395" title="费雪">费雪</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00207" title="先科">先科</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00292" title="灵克">灵克</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00333" title="生活元素">生活元素</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00347" title="优彼">优彼</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00378" title="第一眼">第一眼</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00160" title="纳特">纳特</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00381" title="现代">现代</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00255" title="倍斯特">倍斯特</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00047" title="MATE">MATE</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00106" title="小狗">小狗</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00151" title="猎奇">猎奇</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00237" title="apphome">apphome</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00275" title="红树林">红树林</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00323" title="铁三角">铁三角</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00372" title="新智">新智</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00051" title="Ticwatch">Ticwatch</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00075" title="北通">北通</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00105" title="小欧">小欧</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00156" title="电蟒">电蟒</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00163" title="美的">美的</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00171" title="赛睿">赛睿</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00256" title="漫步者">漫步者</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00271" title="1MORE">1MORE</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00389" title="托马斯和朋友">托马斯和朋友</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00069" title="佳明">佳明</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00083" title="唱吧">唱吧</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00124" title="控客">控客</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00173" title="趋势">趋势</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00203" title="拉卡拉">拉卡拉</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00313" title="爱耳目">爱耳目</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00318" title="NAKVA">NAKVA</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00367" title="博联">博联</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00027" title="QCY">QCY</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00125" title="握奇">握奇</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00135" title="木薯">木薯</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00193" title="飞毛腿">飞毛腿</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00231" title="魔光球">魔光球</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00304" title="静享">静享</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00332" title="超多维">超多维</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00403" title="魔派">魔派</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00001" title="5D">5D</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00005" title="COOWOO">COOWOO</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00035" title="dido">dido</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00087" title="坚果">坚果</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00118" title="德赛">德赛</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00137" title="极米">极米</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00138" title="果壳">果壳</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00265" title="MELOS">MELOS</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00280" title="邦讯">邦讯</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00281" title="阿乐乐可">阿乐乐可</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00282" title="Trasense">Trasense</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00298" title="蛇圣">蛇圣</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00322" title="艾禾美">艾禾美</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00011" title="GOLiFE">GOLiFE</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00026" title="PLAYBULB">PLAYBULB</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00039" title="iMagic">iMagic</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00080" title="唯乐">唯乐</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00084" title="喜马拉雅">喜马拉雅</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00123" title="技德">技德</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00132" title="易科美">易科美</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00168" title="英得尔">英得尔</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00172" title="赛鲸">赛鲸</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00177" title="迈能">迈能</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00273" title="云麦">云麦</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00285" title="浦乐飞">浦乐飞</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00290" title="科势">科势</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00309" title="woody">woody</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00356" title="DNC">DNC</a>
+
+
+
+                <a href="/search/?sort=weight&amp;q=*&amp;props=brand%3AB00371" title="云康宝">云康宝</a>
+
+
+                <div class="find_more" style="display: block;">
+                    <span class="spread_icon">
+                        <img class="up" src="http://p3.qhimg.com/t015f4bcc45a14cddc3.png">
+                        <img class="down" src="http://p3.qhimg.com/t01b76f029538d8f9df.png">
+                    </span>
+                    <span class="find_txt">查看更多</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="filter js-sort last">
+            <span class="hint">排序: </span>
+            <a class="active" href="/search/?q=*" data-monitor="search_paixu_default">默认</a>
+            <a class="active" href="/search/?sort=asc&amp;q=*" data-monitor="home_paixu_sort1">价格</a>
+
+            <span class="filter-chkbox" data-monitor="search_paixu_youhuo">
+                <label>
+                    <input type="checkbox" id="is-stock" data-lnk="/search/?sort=weight&amp;q=*&amp;stock=1"> 仅看有货产品
+                </label>
+            </span>
+        </div>
+    </div>-->
+    <!--page split start-->
+    <div class="list-box" id="list-box" >
+        <ul class="list" id="list">
+
+        </ul>
+
+        <div class="tcdPageCode"></div>
+    </div>
+
+    <!--page split over-->
+
+</div>
+
+<div class="list-footer"></div>
+
+<script charset="utf-8">
+    var cartName =  getCookie("loginedUser");
+    if(cartName  == "") {//
+
+        cartName = 'admin';
+    }
+    console.log(cartName);
+
+    var ajax=InitAjax();
+    DoAjaxGet(ajax,'../data/goodsList.json', load);
+    function load(res) {
+        var json = eval(res);
+        //console.log(json);
+        var hopGoods = 20;//设置每页的张数，可调整。/**/
+        var pag = 0;     //总页数
+        pag=Math.ceil(json.length/hopGoods);
+        /*
+        * 加载首页时
+        * */
+
+        goodsListOnPage(0);//首页标识为0
+        /*
+        * 封装动态拼接页面元素的 一系列点击事件
+        * */
+        function goodsListOnPage(pageNo){
+            var html = '';
+            for (var i =pageNo * hopGoods; i < pageNo * hopGoods + hopGoods; i++) {
+                if (i < json.length) {
+                    html += '<li class="list-item"><dl class="desc"><dt class="pic"><a href="detail.html" target="_blank">   ';
+                    html += ' <img class="lazy" src="' + json[i].url + '" alt=""></a></dt><dd class="cont"><a target="_blank" href="detail.html">          '
+                    html += ' <span class="title">   '
+                    html += json[i].title;
+                    html += '</span><span class="price">   ';
+                    html += json[i].price;
+                    html += ' </span></a></dd><dd class="btns" id="btns"><a href="javascript:;" class="add-cart" id=" ' + json[i].id + ' "><em>加入购物车</em></a></dd></dl></li>';
+                }
+            }
+            $('.product-list .list-box .list').html(html);
+
+            $('.product-list .list-item').click(function(evt){
+                //阻止事件冒泡
+                evt.stopPropagation();
+                //do something
+                var detailId =  $(this).find('.add-cart').attr('id');
+                var detailName =  $(this).find('.title').text();
+                var detailPrice =  $(this).find('.price').text();
+                var detailPic = $(this).find('.lazy').attr('src');
+                var detailNum = 1;
+                //var detail = $.cookie('mydetail') ? JSON.parse($.cookie('mydetail')) : {};
+                //write json
+                detail = {
+                    "name": detailName,
+                    "price": detailPrice,
+                    "num": detailNum,
+                    "id":detailId,
+                    "pic":detailPic
+                    //"usn":goodsUsn
+
+                }
+                //set cookie
+                $.cookie('mydetail', JSON.stringify(detail), {expires: 7, path: '/'});
+                //console.log(JSON.parse($.cookie('mydetail')));
+            })
+            /*
+             * cookie  cart
+             * */
+            $('.list-box .list .list-item .add-cart').click(function(evt) {
+                //阻止事件冒泡
+                event.stopPropagation();
+                //do something
+                var spans = $(this).parent('.btns').siblings();
+                var goodsId = $(this).attr('id');
+                // console.log(goodsId)
+                var goodsName = $(spans[1]).find(' .title ').text();
+                //console.log(goodsName)
+                var goodsPrice = $(spans[1]).find('.price').text();
+                var goodsPic = $(spans[0]).find('.lazy').attr('src');
+
+                /*goods wei json*/
+                var goodsUsn = $('#login-usn').html();
+                var goods = $.cookie("mycart"+cartName) ? JSON.parse($.cookie("mycart"+cartName)) : {};
+                if ( goodsId in goods) {
+                    goods[goodsId].num++;
+                } else {
+                    goods[goodsId]={
+                        "name": goodsName,
+                        "price": goodsPrice,
+                        "num": 1,
+                        "id":goodsId,
+                        "pic":goodsPic
+                        //"usn":goodsUsn
+                    }
+                }
+                $.cookie("mycart"+cartName, JSON.stringify(goods), {expires: 7, path: '/'});
+                // console.log("mycarts:"+$.cookie("mycart"+cartName));
+            })
+
+            $('.tcdPageCode a').click(function(){
+                var timer = null;
+                clearInterval(timer);
+                timer = setInterval(function (){
+                    var current = document.documentElement.scrollTop || document.body.scrollTop || 0; //兼容
+                    if(current < 160){
+                        clearInterval(timer);
+                        return;
+                    } else {
+                        var dis = 150 - current;
+                        //定制速度 可调
+                        var speed = dis > 0? Math.ceil(dis/8): Math.floor(dis/8);
+                        document.documentElement.scrollTop = current + speed;
+                        document.body.scrollTop = current + speed;
+                        return;
+                    }
+
+                }, 30);
+            })
+            /*
+             *fly cart
+             * */
+            //var offset = $("#header-cart").offset();
+            $(".list-item #btns .add-cart").click(function(event) {
+                // return false;
+                var addcar = $(this);
+                var imgUrl = addcar.parent().prev().prev().find('img').attr('src');
+                var flyer = $('<img class="u-flyer" src="' + imgUrl + '">');
+                flyer.fly({
+                    start: {
+                        left: event.clientX +22,
+                        top: event.clientY -70
+                    },
+                    end: {
+                        left: 1555 + 10,
+                        top: 200 + 10,
+                        width: 0,
+                        height: 0
+                    }/*,
+                     onEnd: function () {
+                     //$("#msg").show().animate({width: '250px'}, 200).fadeOut(1000);
+                     //addcar.css("cursor","default").removeClass('orange').unbind('click');
+                     //this.destory();
+                     return;
+                     }*/
+                })
+                // console.log(event.pageX +":"+event.pageY)
+            })
+
+        }
+
+        $(".tcdPageCode").createPage({
+            pageCount:pag +2,
+            current:1,
+            backFn:function(p) {
+                p--;
+              //调用封装好的函数 传入参数
+                goodsListOnPage(p)
+            }
+        })
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+/*
+detail
+*/
+
+
+/* {
+    background: #FFF;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 1240px;
+    color: #666;
+    overflow-x: hidden;
+    position: relative;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}*/
+
+/* */
+.prodIntro{
+    background: #FFF;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 1240px;
+    height: 570px;
+}
+
+.prodIntro .sInfo {
+    float: right;
+    margin: 0;
+    width: 620px;
+}
+.prodIntro .nobdr {
+    border: 0!important;
+}
+.prodIntro .sInfo .tr {
+    border-bottom: 1px #E6E9ED solid;
+    margin-top: 25px;
+    padding-bottom: 8px;
+}
+.prodIntro .sInfo .btns {
+    margin-top: -2px;
+}
+.prodIntro .sInfo .tr strong {
+    color: #0E0E0E;
+    display: block;
+    font-size: 28px;
+    font-weight: bolder;
+    overflow: hidden;
+    width: 600px;
+    text-align: left;
+    height: 84px;
+    line-height: 40px;
+}
+.prodIntro .sInfo .tr p.slogan {
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 85px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 600px;
+}
+.prodIntro .sInfo .tr .txt {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 24px;
+    position: relative;
+}
+.gift {
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    padding-bottom: 22px;
+}
+.gift, .gift-collapse {
+    overflow: hidden;
+}
+.cl {
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+}
+/**/ .sInfo .tr strong {
+    color: #0E0E0E;
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    overflow: hidden;
+    width: 600px;
+}
+/**/ .sInfo .tr .txt .nowprice {
+    background: #F8F8F8;
+    color: #FA5437;
+    display: inline-block;
+    font-size: 36px;
+    font-style: normal;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+/* */.sInfo .tr .txt .nowprice em {
+    font-size: 30px;
+    font-style: normal;
+}
+.gift-label, .promotion-label {
+    background: #FA5437;
+    color: #FFF;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 9px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+}
+.gift-label, .gift-name, .promotion-label, .promotion-text, .gift-count {
+    font-style: normal;
+    height: 23px;
+    line-height: 23px;
+}
+/**/ .sInfo .tr .txt span {
+    color: #848484;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 55px;
+}
+ .sInfo .glist {
+    color: #0E0E0E;
+    float: left;
+    font-size: 14px;
+    width: 545px;
+}
+/**/ .sInfo .glist li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+ .sInfo .glist li a,  .sInfo .glist li a:link {
+    border: 1px #DDD solid;
+    color: #0E0E0E;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+ .sInfo .glist li a,  .sInfo .glist li a:link {
+    border: 1px #DDD solid;
+    color: #0E0E0E;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+ .sInfo .glist li.cur a {
+    border: 1px #FA5437 solid;
+    color: #FA5437;
+    position: relative;
+}
+ .sInfo .tr .gcIpt {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+ .sInfo .tr .gcIpt a {
+    border: 1px solid #CCC;
+    font-family: simsun;
+    font-size: 16px;
+    overflow: hidden;
+    width: 30px;
+}
+
+ .sInfo .tr .gcIpt a,  .sInfo .tr .gcIpt input {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: -1px;
+    vertical-align: middle;
+}
+
+ .sInfo .tr .gcIpt input {
+    background: #FFF;
+    border: 1px #CCC solid;
+    color: #000;
+    font-family: arial;
+    font-size: 13px;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+}
+ .sInfo .tr .gcIpt a.increment {
+    font-size: 16px;
+    line-height: 30px;
+}
+.gInfoBtn {
+    background: #D2D2D2;
+    border-radius: 2px;
+    color: #FFF;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 240px;
+}
+.gInfoBtn-addcart {
+    background: #FD532D;
+}
+.favorite {
+    background: #DADADA;
+    border-radius: 2px;
+    color: #FD532D;
+    float: left;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 16px;
+    text-align: center;
+    width: 150px;
+}
+.nofav {
+    background: #ADADAD;
+    color: #FFF;
+}
+.gInfoBtn-icon-cart {
+    background-position: 0 0;
+}
+.nofav .gInfoBtn-icon-heart {
+    background-position: 0 -20px;
+}
+.favorite:hover .gInfoBtn-icon-heart {
+    color: #FD532D;
+    text-decoration: none;
+    background-image: url("https://p.ssl.qhimg.com/t01916de73c7ee96d34.png");
+    background-position: 0 -40px;
+}
+
+.gInfoBtn-icon {
+    background-image: url(https://p.ssl.qhimg.com/t01916de73c7ee96d34.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    margin-right: .5em;
+    vertical-align: middle;
+    width: 20px;
+}
+a:hover {
+    text-decoration: none;
+}
+.gInfoBtn-icon-heart {
+    background-position: 0 -40px;
+}
+
+ .sInfo .tr .txt span {
+    color: #848484;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 55px;
+}
+
+ .sInfo .guarantee li {
+    color: #848484;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+ .sInfo .guarantee li i {
+    background: url(https://p.ssl.qhimg.com/t01a13c1de287cb87a1.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    margin: 5px 5px 0 0;
+    vertical-align: top;
+    width: 20px;
+}
+ .sInfo .guarantee .postage_free i {
+    background-position: -94px -24px;
+}
+ .sInfo .guarantee li i {
+    background: url(https://p.ssl.qhimg.com/t01a13c1de287cb87a1.png) no-repeat;
+    display: inline-block;
+    height: 20px;
+    margin: 5px 5px 0 0;
+    vertical-align: top;
+    width: 20px;
+}
+ .sInfo .guarantee .sales_return i {
+    background-position: -94px -46px;
+}
+ .sInfo .guarantee .sales_replace i {
+    background-position: -94px -68px;
+}
+ .sInfo .guarantee .shop_info i {
+    background-position: -94px -2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
