@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14bac508-fbfc-46b4-ad98-195e0fd852a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/detail.html" afterPath="$PROJECT_DIR$/html/detail.html" />
-    </list>
+    <list default="true" id="14bac508-fbfc-46b4-ad98-195e0fd852a9" name="Default" comment="" />
     <ignored path="360Mall.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +31,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.4">
+            <state vertical-scroll-proportion="0.10420842">
               <caret line="254" column="45" selection-start-line="254" selection-start-column="45" selection-end-line="254" selection-end-column="45" />
               <folding />
             </state>
@@ -56,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.248497">
+            <state vertical-scroll-proportion="-17.8">
               <caret line="320" column="9" selection-start-line="320" selection-start-column="9" selection-end-line="320" selection-end-column="9" />
               <folding />
             </state>
@@ -302,7 +300,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="225" width="1232" height="672" extended-state="0" />
+    <frame x="345" y="225" width="1232" height="672" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26069078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -546,6 +544,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/html/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.8">
+          <caret line="320" column="9" selection-start-line="320" selection-start-column="9" selection-end-line="320" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-92.828575">
@@ -556,16 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.4">
+        <state vertical-scroll-proportion="0.10420842">
           <caret line="254" column="45" selection-start-line="254" selection-start-column="45" selection-end-line="254" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.248497">
-          <caret line="320" column="9" selection-start-line="320" selection-start-column="9" selection-end-line="320" selection-end-column="9" />
           <folding />
         </state>
       </provider>
