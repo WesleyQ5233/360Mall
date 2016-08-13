@@ -147,6 +147,9 @@
 <!---->
 <div class="detail-footer"></div>
 <script>
+
+    /*click love*/
+    var isCarted = false;
     var cartName =  getCookie("loginedUser");
     if(cartName  == "") {//
         cartName = 'admin';
@@ -176,6 +179,9 @@
     /*进入页面后 各种点击事件*/
     //加减点击
     $('#detail-add').click(function(){
+        if(isCarted){
+            return;
+        }
         var n=$(this).prev().val();
         var nu=parseInt(n)+1;
         if(nu > 20){
@@ -188,6 +194,9 @@
     })
 
       $('#detail-dec').click(function(){
+          if(isCarted){
+              return;
+          }
           var n=$(this).next().val();
           var nu=parseInt(n)-1;
           if(nu==0){tip(); return;}
@@ -201,10 +210,18 @@
     /*直接设置input 值*/
     //
     $('.goodsCount').live("keyup", function(){
+        if(isCarted){
+            $(this).val(goods[detail.id].num);
+            return;
+        }
         this.value=this.value.replace(/[^0-9-]+/, '');
     })
     //
     $('.goodsCount').live("blur", function(){
+        if(isCarted){
+            $(this).val(goods[detail.id].num);
+            return;
+        }
         var n=$(this).val();
         if(n < 1){
             tip()
@@ -224,8 +241,7 @@
     })
 
 
-    /*click love*/
-    var isCarted = false;
+
 
     $('#detail-cart').click(function(){
         if(!isCarted){
@@ -287,6 +303,7 @@
     /*click love*/
     var isLoved = false;
     $('#detail-love').click(function(){
+
         if(!isLoved ){
             $('#detail-love-icon').css("background-position-y","-40px");
             isLoved = true;
@@ -299,6 +316,9 @@
     选择其他款式
     * */
     $(".glist li").click(function(){
+        if(isCarted){
+            return;
+        }
         //active状态改变
         $(this).addClass("cur").siblings().removeClass("cur") ;
     })
