@@ -520,6 +520,7 @@
 <div class="list-footer"></div>
 
 <script charset="utf-8">
+
     var cartName =  getCookie("loginedUser");
     if(cartName  == "") {//
 
@@ -530,6 +531,8 @@
     var ajax=InitAjax();
     DoAjaxGet(ajax,'../data/goodsList.json', load);
     function load(res) {
+        var canClick = true;//当点击购买数量超过临界值时改变其值
+
         var json = eval(res);
         //console.log(json);
         var hopGoods = 20;//设置每页的张数，可调整。/**/
@@ -544,6 +547,8 @@
         * 封装动态拼接页面元素的 一系列点击事件
         * */
         function goodsListOnPage(pageNo){
+
+
             var html = '';
             for (var i =pageNo * hopGoods; i < pageNo * hopGoods + hopGoods; i++) {
                 if (i < json.length) {
@@ -585,6 +590,7 @@
             /*
              * cookie  cart
              * */
+
             $('.list-box .list .list-item .add-cart').click(function(evt) {
                 //阻止事件冒泡
                 event.stopPropagation();
@@ -602,7 +608,19 @@
                 var goods = $.cookie("mycart"+cartName) ? JSON.parse($.cookie("mycart"+cartName)) : {};
                 if ( goodsId in goods) {
                     goods[goodsId].num++;
+                    canClick = true
+                     if(goods[goodsId].num == 20){
+                     canClick = false;
+                         //alert(canClick)
+                     }
+                    if (goods[goodsId].num > 20){
+                        goods[goodsId].num == 20;
+                        canClick = false;
+                        tip()//这部分源码封装在header里
+                        return false;
+                    }
                 } else {
+                    canClick = true
                     goods[goodsId]={
                         "name": goodsName,
                         "price": goodsPrice,
@@ -616,6 +634,8 @@
                 // console.log("mycarts:"+$.cookie("mycart"+cartName));
             })
 
+           /*
+           * 分页点击 该方法由分页插件提供*/
             $('.tcdPageCode a').click(function(){
                 var timer = null;
                 clearInterval(timer);
@@ -635,11 +655,16 @@
 
                 }, 30);
             })
+
+
+
             /*
-             *fly cart
+             *fly cart 该方法由对应插件提供
              * */
-            //var offset = $("#header-cart").offset();
             $(".list-item #btns .add-cart").click(function(event) {
+                if(!canClick){
+                    return false
+                }
                 // return false;
                 var addcar = $(this);
                 var imgUrl = addcar.parent().prev().prev().find('img').attr('src');
@@ -662,8 +687,8 @@
                      return;
                      }*/
                 })
-                // console.log(event.pageX +":"+event.pageY)
             })
+
 
         }
 

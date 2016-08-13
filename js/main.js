@@ -9,7 +9,7 @@ function call(data) {
     for (var i = 0; i < 15;i ++) {
         if(i<json.length){
             //console.log(i)
-            html+='<li><a href="detail.html" target="_blank"><dl class="p11-dl"><dt><img src="'+json[i].url+'" alt=""></dt> ';
+            html+='<li><a href="##" target="_blank"><dl class="p11-dl"><dt><img src="'+json[i].url+'" alt=""></dt> ';
             html += '<dd class="title">'
             html += json[i].title;
             html += '</dd><dd class="price"><span><i>¥</i>';
