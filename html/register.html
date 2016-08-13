@@ -242,7 +242,7 @@
         $($('.quc-tip')[2]).html('');
         return true;
     }
-
+    /**/
     function checkYzm(){
         if(!checkPhoneNum()){
             return false;
@@ -251,6 +251,10 @@
 
         var pwdAgain = document.getElementById("reg-yzm").value;
         var pwd = document.getElementById("reg-pwd").value;
+        if(pwdAgain == "") {
+            $($('.quc-tip')[3]).html('请再次输入密码');
+            return false;
+        }
         if(pwdAgain != pwd){
             $($('.quc-tip')[3]).html('密码不一致，请重新输入');
             return false;
