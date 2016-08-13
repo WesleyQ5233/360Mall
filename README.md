@@ -1,5 +1,6 @@
 1) 仿360商城写的demo，完成度较高。欢迎大神路过抛砖！ 可通过BAE在线链接直接打开：   http://wesleyq5233pj360mall.duapp.com/html/index.html
-PS：如果打不开的话，相比是我的BAE账户余额不够了喜欢的话也可以通过我的github： https://github.com/WesleyQ5233/360Mall.git 下载源码看看，喜欢的话你就star一下。
+PS：如果打不开的话，应该是我的BAE账户余额不够了。喜欢的话也可以通过我的博客： http://www.jianshu.com/users/299af48f70aa/latest_articles
+喜欢的话你就关注一下下。
 PS：项目中用到的图片格式Firefox支持的不太好，用Chrome和360打开就没有问题。
 
 2） 主要功能及技术点：购物车的增删改查、商品详情页的分页效果、登录注册逻辑的实现、二级菜单、吸顶、首页的楼梯效果、ajax、跨域、轮播图、选项卡、代码封装、css3悬浮效果、放大镜并根据用户习惯去完善细节等；
