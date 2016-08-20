@@ -1,0 +1,1 @@
+function getJsonLength(n,r){var t=0;for(var n in r)t++;return t}
