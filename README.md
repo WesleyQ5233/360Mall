@@ -1,3 +1,4 @@
+写在前篇：框架用多了，有点心虚，故决定用原生的直接面向dom的方式，写了个东西，对web初学者还是很有学习意义的奥！
 1) 仿360商城写的demo，完成度较高。欢迎大神路过抛砖！ 可通过BAE在线链接直接打开：   http://wesleyq5233pj360mall.duapp.com/html/index.html
 PS：如果打不开的话，应该是我的BAE账户余额不够了。喜欢的话也可以通过我的博客： http://www.jianshu.com/users/299af48f70aa/latest_articles
 喜欢的话你就关注一下下。
