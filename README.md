@@ -23,7 +23,7 @@ PS：对于没有登录的情况统一设置一个名字为mycartadmin的cookie�
 还有个cookie用来弥补解决商品详情间的情况。
 也可以使用localStorage，上限为5M 而cookie为4KB作为页面间的数据存取的媒介。
 
-5）跨域：首页楼梯十一楼的div所用数据是通过jsonp加载进来的。所用到的PHP文件我已经放在BAE云端，大家也可以看看我写的接口数据，链接: http://wesleyq5233pj360mall.duapp.com/data/kuayu.php ;
+5）跨域：首页楼梯十一楼的div所用数据是通过jsonp加载进来的。所用到的PHP文件我已经放在BAE云端，大家也可以看看我写的接口数据，链接: http://wesleyq5233pj360mall.duapp.com/360Mall/data/kuayu.php  ;
 
 6）ajax：对于页面中相同的部分，单独写成一个html文件（仅包括样式css、html、script，去掉头部尾部等多余的部分，然后通过ajax加载进来； PS：关于ajax运行环境像Hbuilder、Webstorm等自带ajax运行环境，也可以自己下载个软件搭建本地服务器。
 采用的ajax 是我自己封装的。主要就初始时写下兼容、然后封装个get 、post 方法及各自成功是的回调函数，喜欢的话 可以自己写个。
